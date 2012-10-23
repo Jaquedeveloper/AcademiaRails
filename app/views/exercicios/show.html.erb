@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @exercicio.nome %>
+</p>
+
+<p>
+  <b>Calorias gastas:</b>
+  <%= @exercicio.calorias_gastas %>
+</p>
+
+<p>
+  <b>Numero series:</b>
+  <%= @exercicio.numero_series %>
+</p>
+
+<p>
+  <b>Tempo descanso:</b>
+  <%= @exercicio.tempo_descanso %>
+</p>
+
+<p>
+  <b>Exercicios series:</b>
+  <%= @exercicio.exercicios_series %>
+</p>
+
+
+<%= link_to 'Edit', edit_exercicio_path(@exercicio) %> |
+<%= link_to 'Back', exercicios_path %>

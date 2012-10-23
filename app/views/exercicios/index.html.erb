@@ -1,0 +1,31 @@
+<h1>Listing exercicios</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Calorias gastas</th>
+    <th>Numero series</th>
+    <th>Tempo descanso</th>
+    <th>Exercicios series</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exercicios.each do |exercicio| %>
+  <tr>
+    <td><%= exercicio.nome %></td>
+    <td><%= exercicio.calorias_gastas %></td>
+    <td><%= exercicio.numero_series %></td>
+    <td><%= exercicio.tempo_descanso %></td>
+    <td><%= exercicio.exercicios_series %></td>
+    <td><%= link_to 'Show', exercicio %></td>
+    <td><%= link_to 'Edit', edit_exercicio_path(exercicio) %></td>
+    <td><%= link_to 'Destroy', exercicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exercicio', new_exercicio_path %>
