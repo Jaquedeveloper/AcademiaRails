@@ -1,0 +1,25 @@
+<h1>Listing tipo_treinos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_treinos.each do |tipo_treino| %>
+  <tr>
+    <td><%= tipo_treino.nome %></td>
+    <td><%= tipo_treino.descricao %></td>
+    <td><%= link_to 'Show', tipo_treino %></td>
+    <td><%= link_to 'Edit', edit_tipo_treino_path(tipo_treino) %></td>
+    <td><%= link_to 'Excluir', tipo_treino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo treino', new_tipo_treino_path %>

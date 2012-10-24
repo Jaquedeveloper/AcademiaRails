@@ -1,4 +1,10 @@
 Academiarails::Application.routes.draw do
+  resources :usuarios
+
+  resources :tipo_treinos
+
+  resources :tipo_refeicaos
+
   resources :exercicios
 
   resources :alimentos

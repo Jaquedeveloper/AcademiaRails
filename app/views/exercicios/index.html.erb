@@ -4,9 +4,9 @@
   <tr>
     <th>Nome</th>
     <th>Calorias gastas</th>
-    <th>Numero series</th>
-    <th>Tempo descanso</th>
-    <th>Exercicios series</th>
+    <th>Número de séries</th>
+    <th>Tempo de descanso</th>
+    <th>Exercícios por série</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,7 +21,7 @@
     <td><%= exercicio.exercicios_series %></td>
     <td><%= link_to 'Show', exercicio %></td>
     <td><%= link_to 'Edit', edit_exercicio_path(exercicio) %></td>
-    <td><%= link_to 'Destroy', exercicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Excluir', exercicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

@@ -1,14 +1,44 @@
 # coding: utf-8
 
-
 require 'spec_helper'
-feature 'gerenciar_alimentos' do
-scenario 'incluir Alimentos' do # , :javascript => true  do
-    visit new_alimento_path
-	preencher_e_verificar_alimento
-end
 
-def preencher_e_verificar_alimento
+feature 'gerenciar alimento' do
+
+  scenario 'incluir alimento' do # , :js => true  do
+
+    visit new_alimento_path
+
+    preencher_e_verificar_alimento
+
+    
+
+  end
+
+  scenario 'alterar alimento' do #, :js => true  do
+
+    alimento = FactoryGirl.create(:alimento)
+
+    visit edit_alimento_path(alimento)
+
+    preencher_e_verificar_alimento
+
+
+
+  end
+
+   scenario 'excluir alimento' do #, :javascript => true  do
+
+       alimento = FactoryGirl.create(:alimento)
+
+        visit alimentos_path
+
+        click_link 'Excluir'
+
+    
+
+  end
+
+   def preencher_e_verificar_alimento
 
 	fill_in 'Nome',  :with => "Maca"
 	fill_in 'Categoria',  :with => "fruta"
@@ -27,6 +57,8 @@ def preencher_e_verificar_alimento
 	page.should have_content 'Carboidratos: 50'
 	page.should have_content 'Proteinas: 7'
 	page.should have_content 'Gorduras: 0'
+   end
 end
 
-end
+
+

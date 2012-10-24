@@ -1,0 +1,2 @@
+module TipoTreinosHelper
+end

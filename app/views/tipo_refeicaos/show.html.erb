@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @tipo_refeicao.nome %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @tipo_refeicao.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_refeicao_path(@tipo_refeicao) %> |
+<%= link_to 'Back', tipo_refeicaos_path %>
