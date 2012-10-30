@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>TipoRefeicao:</b>
+  <%= @refeicao.Tipo_Refeicao.nome %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @refeicao.Usuario.nome %>
+</p>
+
+<p>
+  <b>Calorias consumidas:</b>
+  <%= @refeicao.calorias_consumidas %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @refeicao.hora %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @refeicao.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_refeicao_path(@refeicao) %> |
+<%= link_to 'Back', refeicaos_path %>

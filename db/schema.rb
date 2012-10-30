@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024124138) do
+ActiveRecord::Schema.define(:version => 20121024131404) do
 
   create_table "alimentos", :force => true do |t|
     t.string   "nome"
@@ -35,6 +35,19 @@ ActiveRecord::Schema.define(:version => 20121024124138) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
+
+  create_table "refeicaos", :force => true do |t|
+    t.integer  "Tipo_Refeicao_id"
+    t.integer  "Usuario_id"
+    t.integer  "calorias_consumidas"
+    t.string   "hora"
+    t.string   "data"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "refeicaos", ["Tipo_Refeicao_id"], :name => "index_refeicaos_on_Tipo_Refeicao_id"
+  add_index "refeicaos", ["Usuario_id"], :name => "index_refeicaos_on_Usuario_id"
 
   create_table "tipo_refeicaos", :force => true do |t|
     t.string   "nome"

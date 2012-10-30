@@ -1,0 +1,31 @@
+<h1>Listing refeicaos</h1>
+
+<table>
+  <tr>
+    <th>TipoRefeicao</th>
+    <th>Usuario</th>
+    <th>Calorias consumidas</th>
+    <th>Hora</th>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @refeicaos.each do |refeicao| %>
+  <tr>
+    <td><%= refeicao.Tipo_Refeicao %></td>
+    <td><%= refeicao.Usuario %></td>
+    <td><%= refeicao.calorias_consumidas %></td>
+    <td><%= refeicao.hora %></td>
+    <td><%= refeicao.data %></td>
+    <td><%= link_to 'Show', refeicao %></td>
+    <td><%= link_to 'Edit', edit_refeicao_path(refeicao) %></td>
+    <td><%= link_to 'Excluir', refeicao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Refeicao', new_refeicao_path %>

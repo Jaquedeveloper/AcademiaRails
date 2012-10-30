@@ -1,4 +1,6 @@
 Academiarails::Application.routes.draw do
+  resources :refeicaos
+
   resources :usuarios
 
   resources :tipo_treinos
