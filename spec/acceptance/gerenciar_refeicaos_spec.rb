@@ -13,8 +13,7 @@ feature 'gerenciar refeicao' do
   scenario 'alterar refeicao' do #, :javascript => true  do
    	tipo_refeicao = FactoryGirl.create(:tipo_refeicao, :nome => 'Almoço')
 	usuario = FactoryGirl.create(:usuario, :nome => 'Jaqueline')
-	refeicao = FactoryGirl.create(:refeicao, :Tipo_Refeicao => tipo_refeicao)
-	refeicao2 = FactoryGirl.create(:refeicao, :Usuario => usuario)
+	refeicao = FactoryGirl.create(:refeicao, :Tipo_Refeicao => tipo_refeicao, :Usuario => usuario)
     visit edit_refeicao_path(refeicao)
     preencher_e_verificar_refeicao
   end
@@ -22,8 +21,7 @@ feature 'gerenciar refeicao' do
   scenario 'excluir refeicao' do #, :javascript => true  do	
     tipo_refeicao = FactoryGirl.create(:tipo_refeicao, :nome => 'Almoço')
 	usuario = FactoryGirl.create(:usuario, :nome => 'Jaqueline')
-	refeicao = FactoryGirl.create(:refeicao, :Tipo_Refeicao => tipo_refeicao)
-	refeicao2 = FactoryGirl.create(:refeicao, :Usuario => usuario)	
+	refeicao = FactoryGirl.create(:refeicao, :Tipo_Refeicao => tipo_refeicao, :Usuario => usuario)	
     visit refeicaos_path	
     click_link 'Excluir'
   end

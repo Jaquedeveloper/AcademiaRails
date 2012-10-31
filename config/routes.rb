@@ -1,4 +1,6 @@
 Academiarails::Application.routes.draw do
+  resources :alimentorefeicaos
+
   resources :refeicaos
 
   resources :usuarios

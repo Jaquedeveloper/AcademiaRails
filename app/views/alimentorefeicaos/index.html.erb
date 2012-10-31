@@ -1,0 +1,25 @@
+<h1>Listing alimentorefeicaos</h1>
+
+<table>
+  <tr>
+    <th>refeicao</th>
+    <th>alimento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alimentorefeicaos.each do |alimentorefeicao| %>
+  <tr>
+    <td><%= alimentorefeicao.refeicao %></td>
+    <td><%= alimentorefeicao.alimento %></td>
+    <td><%= link_to 'Show', alimentorefeicao %></td>
+    <td><%= link_to 'Edit', edit_alimentorefeicao_path(alimentorefeicao) %></td>
+    <td><%= link_to 'Excluir', alimentorefeicao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alimentorefeicao', new_alimentorefeicao_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>refeicao:</b>
+  <%= @alimentorefeicao.refeicao.data %>
+</p>
+
+<p>
+  <b>alimento:</b>
+  <%= @alimentorefeicao.alimento.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_alimentorefeicao_path(@alimentorefeicao) %> |
+<%= link_to 'Back', alimentorefeicaos_path %>
