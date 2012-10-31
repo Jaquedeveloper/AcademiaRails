@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Treino:</b>
+  <%= @treinoexercicio.treino.data %>
+</p>
+
+<p>
+  <b>Exercicio:</b>
+  <%= @treinoexercicio.exercicio.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_treinoexercicio_path(@treinoexercicio) %> |
+<%= link_to 'Back', treinoexercicios_path %>

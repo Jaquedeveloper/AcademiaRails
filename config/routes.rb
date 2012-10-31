@@ -1,4 +1,6 @@
 Academiarails::Application.routes.draw do
+  resources :treinoexercicios
+
   resources :treinos
 
   resources :historicos
