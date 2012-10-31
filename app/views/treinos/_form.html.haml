@@ -1,0 +1,8 @@
+= semantic_form_for [@treino] do |form|
+	= form.input :usuario, :member_label => :nome, :label => 'Usuario' 
+	= form.input :tipo_treino, :member_label=> :nome, :label=> 'Tipo treino'
+	= form.input :calorias_gastas, :label => 'Calorias gastas' 
+	= form.input :tempo, :label => 'Tempo' 
+	= form.input :data, :label => 'Data' 
+	= form.input :horario, :label => 'Horario' 
+	= form.submit 'Salvar'

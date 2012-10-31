@@ -1,4 +1,8 @@
 Academiarails::Application.routes.draw do
+  resources :treinos
+
+  resources :historicos
+
   resources :alimentorefeicaos
 
   resources :refeicaos

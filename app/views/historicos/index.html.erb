@@ -1,0 +1,49 @@
+<h1>Listing historicos</h1>
+
+<table>
+  <tr>
+    <th>Refeicao</th>
+    <th>Treino</th>
+    <th>Peso atual</th>
+    <th>Gordura corporal</th>
+    <th>Valor metabolico</th>
+    <th>Peso gordura</th>
+    <th>Peso gordura ideal</th>
+    <th>Massa magra</th>
+    <th>Calorias a consumir</th>
+    <th>Peso perdido</th>
+    <th>Peso a perder</th>
+    <th>Peso ideal</th>
+    <th>Saldo calorias</th>
+    <th>Situacao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @historicos.each do |historico| %>
+  <tr>
+    <td><%= historico.refeicao %></td>
+    <td><%= historico.treino %></td>
+    <td><%= historico.peso_atual %></td>
+    <td><%= historico.gordura_corporal %></td>
+    <td><%= historico.valor_metabolico %></td>
+    <td><%= historico.peso_gordura %></td>
+    <td><%= historico.peso_gordura_ideal %></td>
+    <td><%= historico.massa_magra %></td>
+    <td><%= historico.calorias_a_consumir %></td>
+    <td><%= historico.peso_perdido %></td>
+    <td><%= historico.peso_a_perder %></td>
+    <td><%= historico.peso_ideal %></td>
+    <td><%= historico.saldo_calorias %></td>
+    <td><%= historico.situacao %></td>
+    <td><%= link_to 'Show', historico %></td>
+    <td><%= link_to 'Edit', edit_historico_path(historico) %></td>
+    <td><%= link_to 'Excluir', historico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Historico', new_historico_path %>

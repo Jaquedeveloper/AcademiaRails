@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @treino.usuario.nome %>
+</p>
+
+<p>
+  <b>Tipo treino:</b>
+  <%= @treino.tipo_treino.nome %>
+</p>
+
+<p>
+  <b>Calorias gastas:</b>
+  <%= @treino.calorias_gastas %>
+</p>
+
+<p>
+  <b>Tempo:</b>
+  <%= @treino.tempo %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @treino.data %>
+</p>
+
+<p>
+  <b>Horario:</b>
+  <%= @treino.horario %>
+</p>
+
+
+<%= link_to 'Edit', edit_treino_path(@treino) %> |
+<%= link_to 'Back', treinos_path %>

@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Refeicao:</b>
+  <%= @historico.refeicao.data %>
+</p>
+
+<p>
+  <b>Treino:</b>
+  <%= @historico.treino.data %>
+</p>
+
+<p>
+  <b>Peso atual:</b>
+  <%= @historico.peso_atual %>
+</p>
+
+<p>
+  <b>Gordura corporal:</b>
+  <%= @historico.gordura_corporal %>
+</p>
+
+<p>
+  <b>Valor metabolico:</b>
+  <%= @historico.valor_metabolico %>
+</p>
+
+<p>
+  <b>Peso gordura:</b>
+  <%= @historico.peso_gordura %>
+</p>
+
+<p>
+  <b>Peso gordura ideal:</b>
+  <%= @historico.peso_gordura_ideal %>
+</p>
+
+<p>
+  <b>Massa magra:</b>
+  <%= @historico.massa_magra %>
+</p>
+
+<p>
+  <b>Calorias a consumir:</b>
+  <%= @historico.calorias_a_consumir %>
+</p>
+
+<p>
+  <b>Peso perdido:</b>
+  <%= @historico.peso_perdido %>
+</p>
+
+<p>
+  <b>Peso a perder:</b>
+  <%= @historico.peso_a_perder %>
+</p>
+
+<p>
+  <b>Peso ideal:</b>
+  <%= @historico.peso_ideal %>
+</p>
+
+<p>
+  <b>Saldo calorias:</b>
+  <%= @historico.saldo_calorias %>
+</p>
+
+<p>
+  <b>Situacao:</b>
+  <%= @historico.situacao %>
+</p>
+
+
+<%= link_to 'Edit', edit_historico_path(@historico) %> |
+<%= link_to 'Back', historicos_path %>

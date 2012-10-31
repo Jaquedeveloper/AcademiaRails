@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121030130924) do
+ActiveRecord::Schema.define(:version => 20121031125534) do
 
   create_table "alimentorefeicaos", :force => true do |t|
     t.integer  "refeicao_id"
@@ -46,6 +46,28 @@ ActiveRecord::Schema.define(:version => 20121030130924) do
     t.datetime "updated_at",        :null => false
   end
 
+  create_table "historicos", :force => true do |t|
+    t.integer  "refeicao_id"
+    t.integer  "treino_id"
+    t.float    "peso_atual"
+    t.float    "gordura_corporal"
+    t.integer  "valor_metabolico"
+    t.float    "peso_gordura"
+    t.float    "peso_gordura_ideal"
+    t.float    "massa_magra"
+    t.integer  "calorias_a_consumir"
+    t.float    "peso_perdido"
+    t.float    "peso_a_perder"
+    t.float    "peso_ideal"
+    t.integer  "saldo_calorias"
+    t.string   "situacao"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "historicos", ["refeicao_id"], :name => "index_historicos_on_refeicao_id"
+  add_index "historicos", ["treino_id"], :name => "index_historicos_on_treino_id"
+
   create_table "refeicaos", :force => true do |t|
     t.integer  "Tipo_Refeicao_id"
     t.integer  "Usuario_id"
@@ -72,6 +94,20 @@ ActiveRecord::Schema.define(:version => 20121030130924) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "treinos", :force => true do |t|
+    t.integer  "usuario_id"
+    t.integer  "tipo_treino_id"
+    t.integer  "calorias_gastas"
+    t.string   "tempo"
+    t.string   "data"
+    t.string   "horario"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "treinos", ["tipo_treino_id"], :name => "index_treinos_on_tipo_treino_id"
+  add_index "treinos", ["usuario_id"], :name => "index_treinos_on_usuario_id"
 
   create_table "usuarios", :force => true do |t|
     t.string   "nome"
