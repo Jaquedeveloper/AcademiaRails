@@ -21,7 +21,7 @@
     <td><%= exercicio.exercicios_series %></td>
     <td><%= link_to 'Show', exercicio %></td>
     <td><%= link_to 'Edit', edit_exercicio_path(exercicio) %></td>
-    <td><%= link_to 'Excluir', exercicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Excluir', exercicio, method: :delete, data: { confirm: 'Deseja realmente excluir?' } %></td>
   </tr>
 <% end %>
 </table>
