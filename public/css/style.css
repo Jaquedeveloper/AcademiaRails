@@ -1,0 +1,56 @@
+body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #DB7093;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+	
+	ul {
+		list-style-type:none;	
+	}
+
+	li{
+		font-size: 20px ;
+	}
+
+	a{
+	color: #DB7093;
+	}
+
+	h2{
+		color: #FF1493;
+	}
+
+	p{
+		font-size:18px;
+	}
+
+	.help{
+		font-size:18px;
+		color: #8B658B;
+	}
+      
+	.bolinha{
+		list-style-type: square;
+		color: #9AFF9A;
+		
+	}
+
+      .filename {
+        font-style: italic;
+      }
